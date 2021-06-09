@@ -1,8 +1,26 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
-const HomeScreen = () => {
-  return <Text style={styles.text}>HomeScreen</Text>;
+const HomeScreen = ({ navigation }) => {
+  //props裡有navigation在往下有navigate的方法 navigate用意是在於在裝置上要顯示哪一個內容
+  return <View>
+    
+      <Text style={styles.text}>Hello this is my first program in React Native</Text>
+      <Button 
+        onPress ={() => navigation.navigate('Components')}
+        title='GO to Components Demo' 
+      />
+      <Button
+         onPress ={() => navigation.navigate('List')}
+         title='GO to List Demo' 
+      />
+      <Button
+         onPress ={() => navigation.navigate('Image')}
+         title='GO to Image Demo' 
+      />
+
+    
+  </View>
 };
 
 const styles = StyleSheet.create({
