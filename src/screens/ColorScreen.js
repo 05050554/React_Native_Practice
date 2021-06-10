@@ -23,7 +23,7 @@ const [colors,setColors]= useState([]);
     </View>
     )
 }
-
+//floor <= 的整數
 const randomRgb = () =>{
     const red = Math.floor(Math.random() * 256)
     const green = Math.floor(Math.random() * 256)
